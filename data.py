@@ -60,13 +60,13 @@ def create_image():
 	n=1
 	#loop over rotation: num1, num2 
 	for x1 in np.arange(start=3, step=2, stop=4):
-		for y1 in np.arange(start=2, step=2, stop=3):
-			for xOp in np.arange(start=30, step=2, stop=31):
-				for yOp in np.arange(start=1, step=2, stop=2):
-					for x2 in np.arange(start=52, step=2, stop=53):
-						for y2 in np.arange(start=2, step=2, stop=3):
-							for r1 in np.arange(start=-15, step=8, stop=60):
-								for r2 in np.arange(start=-15, step=8, stop=60):
+		for y1 in np.arange(start=2, step=2, stop=5):
+			for xOp in np.arange(start=30, step=2, stop=37):
+				for yOp in np.arange(start=1, step=2, stop=8):
+					for x2 in np.arange(start=52, step=2, stop=55):
+						for y2 in np.arange(start=2, step=2, stop=5):
+							for r1 in np.arange(start=-15, step=8, stop=-10):
+								for r2 in np.arange(start=-15, step=8, stop=-10):
 									draw_input.text((x1, y1), num1, (255,255,255), font=font)
 									draw_input.text((xOp, yOp), op, (255,255,255), font=font)
 									draw_input.text((x2, y2), num2, (255,255,255), font=font)
