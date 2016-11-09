@@ -26,53 +26,53 @@ def create_image():
 	n = 1
 	
 	#check size of num1, num2, op
-	sizex1, sizey1 = font.getsize(num1)
-	sizeOp1, sizeOp2 = font.getsize(op)
-	sizex2, sizey2 = font.getsize(num2)
-	print sizex1, sizey1
-	print sizeOp1, sizeOp2
-	print sizex2, sizey2	
+	#sizex1, sizey1 = font.getsize(num1)
+	#sizeOp1, sizeOp2 = font.getsize(op)
+	#sizex2, sizey2 = font.getsize(num2)
+	#print sizex1, sizey1
+	#print sizeOp1, sizeOp2
+	#print sizex2, sizey2	
 	
 	# 1 example tets
-	x1 = 2
-	y1 = 2
-	xOp = 26
-	yOp = 0
-	x2 = 50
-	y2 = 2
-	draw_input.text((x1, y1), num1, (255, 255, 255), font=font)
-	draw_input.text((xOp, yOp), op, (255,255,255), font=font)
-	draw_input.text((x2, y2), num2, (255,255,255), font=font)
+	#x1 = 2
+	#y1 = 2
+	#xOp = 26
+	#yOp = 0
+	#x2 = 50
+	#y2 = 2
+	#draw_input.text((x1, y1), num1, (255, 255, 255), font=font)
+	#draw_input.text((xOp, yOp), op, (255,255,255), font=font)
+	#draw_input.text((x2, y2), num2, (255,255,255), font=font)
 	
-	input_name = "input" + str(n) + ".png"	
-	input_img.save(input_name)
-	n += 1
+	#input_name = "input" + str(n) + ".png"	
+	#input_img.save(input_name)
+	#n += 1
 							
 	#rotate
-	current_image = Image.open(input_name)	
-	crop_num1 = current_image.crop((0,0,26,26)).rotate(60)
-    	current_image.paste(crop_num1, (0,0))
-	current_image.save(input_name)										
-	crop_num2 = current_image.crop((50, 0, 72, 28)).rotate(-15)
-	current_image.paste(crop_num2, (50,0))
-	current_image.save(input_name)
+	#current_image = Image.open(input_name)	
+	#crop_num1 = current_image.crop((0,0,26,26)).rotate(60)
+    	#current_image.paste(crop_num1, (0,0))
+	#current_image.save(input_name)										
+	#crop_num2 = current_image.crop((50, 0, 72, 28)).rotate(-15)
+	#current_image.paste(crop_num2, (50,0))
+	#current_image.save(input_name)
 	
-
-	# loop over rotation: num1, num2 
-	#for x1 in np.arange(start=2, step=2, stop=10):
-	#	for y1 in np.arange(start=2, step=2, stop=10):
-	#		for xOp in np.arange(start=26, step=2, stop=38):
-	#			for yOp in np.arange(start=0, step=2, stop=17):
-	#				for x2 in np.arange(start=50, step=2, stop=56):
-	#					for y2 in np.arange(start=2, step=2, stop=10):
-	#						for r1 in np.arange(start=-15, step=5, stop=60):
-	#							for r2 in np.arange(start=-15, step=5, stop=60):
-	#								draw_input.text((x1, y1), num1, (255,255,255), font=font1)
-	#								draw_input.text((xOp, yOp), op, (255,255,255), font=font2)
-	#								draw_input.text((x2, y2), num2, (255,255,255), font=font1)
+	n=1
+	#loop over rotation: num1, num2 
+	for x1 in np.arange(start=2, step=2, stop=6):
+		for y1 in np.arange(start=2, step=2, stop=5):
+			for xOp in np.arange(start=26, step=2, stop=36):
+				for yOp in np.arange(start=0, step=2, stop=8):
+					for x2 in np.arange(start=50, step=2, stop=54):
+						for y2 in np.arange(start=2, step=2, stop=5):
+							for r1 in np.arange(start=-15, step=5, stop=60):
+								for r2 in np.arange(start=-15, step=5, stop=60):
+									draw_input.text((x1, y1), num1, (255,255,255), font=font)
+									draw_input.text((xOp, yOp), op, (255,255,255), font=font)
+									draw_input.text((x2, y2), num2, (255,255,255), font=font)
 	#								input_name = "input" + str(n) + ".png"	
 	#								input_img.save(input_name)
-	#								n += 1
+									n += 1
 	#						
 	#								#rotate
 	#								current_image = Image.open(input_name)	
@@ -82,7 +82,8 @@ def create_image():
 	#								crop_num2 = current_image.crop((50, 0, 72, 28)).rotate(r2)
 	#								current_image.paste(crop_num2, (50,0))
 	#								current_image.save(input_name)
-	#								
+	#
+	print n								
 #label
 	#label_text = str(result)
 	#label_text = "10"
