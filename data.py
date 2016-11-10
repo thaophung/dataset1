@@ -55,14 +55,14 @@ def create_image():
 	
 	n=1
 	#loop over rotation: num1, num2 
-	for x1 in np.arange(start=3, step=2, stop=6):
-		for y1 in np.arange(start=2, step=2, stop=5):
-			for xOp in np.arange(start=30, step=2, stop=37):
-				for yOp in np.arange(start=1, step=2, stop=8):
-					for x2 in np.arange(start=52, step=2, stop=55):
-						for y2 in np.arange(start=2, step=2, stop=5):
-							for r1 in np.arange(start=-15, step=8, stop=60):
-								for r2 in np.arange(start=-15, step=8, stop=60):
+	for x1 in np.arange(start=5, step=2, stop=6):#3,6
+		for y1 in np.arange(start=2, step=2, stop=3):#2,5
+			for xOp in np.arange(start=34, step=2, stop=35):#30, 37
+				for yOp in np.arange(start=1, step=2, stop=2):#1,8
+					for x2 in np.arange(start=54, step=2, stop=55):#52, 55
+						for y2 in np.arange(start=2, step=2, stop=3):#2,5
+							for r1 in np.arange(start=30, step=8, stop=60):#-15, 60
+								for r2 in np.arange(start=-15, step=8, stop=30):
     									input_img = Image.new("RGB", size, (0, 0, 0))
     									draw_input = ImageDraw.Draw(input_img)
 									draw_input.text((x1, y1), num1, (255,255,255), font=font)
